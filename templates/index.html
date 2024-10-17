@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqk1Q27o42mPGL8j+bvROxJ/bZ88p/lA7y/+AdpEYJ+reICrZPAeFGlGtlclwBrP8A0I+z+9ews=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img
+                alt="Illustration of a doctor and a patient interacting through mobile screens"
+                height="400"
+                src="https://storage.googleapis.com/a1aa/image/s7fZWseEPFh920LycYnUK9efyBhwY4N8UFeLXTfdtF4a6g45E.jpg"
+                width="400"
+            />
+        </div>
+        <div class="right">
+            <h1>Welcome Back!</h1>
+            <p>
+                Don't have an account yet? 
+                <a href="/signup">Create an Account</a>
+            </p>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="google-login">
+                <a href="/ login/google"><button>
+                    <i class="fa-brands fa-google"></i>
+                    Login with Google
+                </button></a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

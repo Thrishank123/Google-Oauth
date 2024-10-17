@@ -1,6 +1,18 @@
-FROM python:3.10.8-slim-buster
-ADD . /code
-WORKDIR /code
-RUN pip install -r requirements.txt
+# Use a lightweight Python base image
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the requirements file and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all application code into the container
+COPY . .
+
+# Expose port 80 for Flask
 EXPOSE 80
-CMD python main.py
+
+# Command to run the Flask app
+CMD ["python", "main.py"]

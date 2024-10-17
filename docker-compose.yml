@@ -1,8 +1,10 @@
-version: '1'
+version: '3.8'  # You can safely remove or ignore the version warning
+
 services:
   web:
     build: .
-    volumes:
-      - .:/code
     ports:
       - "80:80"
+    command: python main.py  # Ensure this points to the correct file
+    volumes:
+      - .:/app  # This ensures your local code is synced with the container
